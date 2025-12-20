@@ -48,13 +48,13 @@ function TypeToMe.Helpers.normalizeText(text)
         :gsub("…", "...")
         :gsub("|n", "\n")
         :gsub("\r", "\n")
+        -- :gsub("\n\n", "\n") -- this fixes extra new lines in letters but breaks quests
         :gsub("\n\n+", "\n\n")
 		
 		--the following might not be the best idea
 		:gsub("  ", " ")
 		:gsub (" \n", "\n")
 		-- :gsub ("\194\160", "\n")
-        -- :gsub("%s+$", "")  --trim trailing spaces and newlines
 end
 
 function TypeToMe.Helpers.typingStats(totalTypingTime, incorrectCharacters, correctCharacters)

@@ -1,13 +1,9 @@
 ## Interface: 110207
 ## Title: TypeToMe
-## Notes: Type quest description text to accept and complete quests. Or sit in the library and write/copy books.
+## Notes: Type quest descriptions to accept and complete quests. Or sit in the library and write/copy books.
 ## Author: Bleizaun
 ## Version: 1.0
 ## SavedVariables: TypeToMeDB
 helpers.lua
 quests.lua
 books_letters_etc.lua
-
-# test auto accept
-
-# test /typtome qeusts reward frame show more with quest log

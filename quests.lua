@@ -108,15 +108,15 @@ end
 frame:SetScript("OnEvent", function(self, event)
     if not TypeToMeDB.enabled then return end
     
+    if IsInGroup() then
+        print("TypeToMe - Skipping quest: In group")
+        return
+    end
+    
     if IsInInstance() then
 		print("TypeToMe - Skipping quest: In instance")
 		return 
 	end
-    
-    -- if IsInGroup() then
-    --     print("TypeToMe - Skipping quest: In group")
-    --     return
-    -- end
     
     local questID = GetQuestID()
     if not questID or questID == 0 then return end

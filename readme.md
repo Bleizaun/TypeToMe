@@ -1,5 +1,5 @@
 # TypeToMeClassic
-Type quest description text to accept and complete quests. Or sit in the library and write/copy books.
+A typing exercise addon. Type quest descriptions to accept and complete quests. Or sit in the library and write/copy books.
 
 ## How to use:
 Copy the unzipped TypeToMe folder into `*/_retail_/Interface/AddOns/`
@@ -19,6 +19,7 @@ After installing the addon it should automatically run. If you encounter grey te
 `/typetome stats`
 * Toggles statistics output on/off. Default: On. 
 * After finishing a text for the first time, words per minute, typed characters, spent time and accuracy are displayed in the chat window. 
+* The timer should start when you type the first character and not when you open the quest frame. 
 
 `/typetome <accuracy>`
 
@@ -45,9 +46,9 @@ In general all text which would be typed more than once was excluded because tha
 ### Excluded texts: 
 * Everything besides the quest info description text in quest accept frames, and the quest info reward text in quest complete frames.
 
-* All quest text if you are in an instance - because everyone is an a hurry...
+* All quests if you are in an instance - because everyone is an a hurry...
 
-* Quest info description text for auto-accept quests since it makes no sense to hide the accept button and because they appear unprompted. (This is still bugged for quests started by items.)
+* Quest info description text for auto-accept quests since it makes no sense to hide the accept button and because they appear unprompted.
 
 
 ## Additional Info
@@ -58,6 +59,10 @@ No statistics are logged.
 
 Partially typed text should only reset when opening a frame with a different questID so if you get interrupted or the quest giver wanders off you don't have to start over as long as you open the same quest (and don't reload the UI).
 
-In general this was inteded to be a very low pressure typing exercise. 
+In general this was inteded to be a very low pressure typing exercise (I'm pretty new to touch typing (and coding) and wanted to finally finish at least one of my projects.)
 
 Feedback welcome. Thank you for trying and happy typing.
+
+## Known issues
+
+* Quests started by items are auto-accepted but not skipped by the addon.

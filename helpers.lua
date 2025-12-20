@@ -48,10 +48,10 @@ function TypeToMe.Helpers.normalizeText(text)
         :gsub("…", "...")
         :gsub("|n", "\n")
         :gsub("\r", "\n")
-        -- :gsub("\n\n", "\n") -- this fixes extra new lines in letters but breaks quests
+        -- :gsub("\n\n", "\n") -- this fixes extra new lines in items but breaks quests
         :gsub("\n\n+", "\n\n")
 		
-		--the following might not be the best idea
+		--these following might not be the best idea
 		:gsub("  ", " ")
 		:gsub (" \n", "\n")
 		-- :gsub ("\194\160", "\n")

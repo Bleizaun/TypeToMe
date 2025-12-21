@@ -170,7 +170,7 @@ end)
 
 QuestFrame:HookScript("OnHide", function()
 	resetEditBox()
-    -- this ensures objectives are not hidden in the quest log after closing a quest frame
+    -- this ensures objectives are not hidden in the quest log after closing an incomplete quest frame
     QuestInfoObjectivesHeader:Show()
     QuestInfoObjectivesText:Show()
     -- QuestInfoRewardsFrame:Show()

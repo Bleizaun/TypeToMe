@@ -96,7 +96,7 @@ end
 
 local function prepareTyping()
     hideObjectiveReward()
-    C_Timer.After(0.05, function() --maybe set this back to 0 -----this might prevent rewards being shown the first time the quest frame is opened after login
+    C_Timer.After(0, function() --maybe set this back to 0 -----this might prevent rewards being shown the first time the quest frame is opened after login
         hideObjectiveReward()
     end)    
 	editBox:Show()
@@ -108,10 +108,10 @@ end
 frame:SetScript("OnEvent", function(self, event)
     if not TypeToMeDB.enabled then return end
     
-    if IsInGroup() then
-        print("TypeToMe - Skipping quest: In group")
-        return
-    end
+    -- if IsInGroup() then
+    --     print("TypeToMe - Skipping quest: In group")
+    --     return
+    -- end
     
     if IsInInstance() then
 		print("TypeToMe - Skipping quest: In instance")
@@ -167,6 +167,10 @@ end)
 
 QuestFrame:HookScript("OnHide", function()
 	resetEditBox()
+    -- this ensures objectives are not hidden in the quest log after closing a quest frame
+    QuestInfoObjectivesHeader:Show()
+    QuestInfoObjectivesText:Show()
+    -- QuestInfoRewardsFrame:Show()
 end)
 
 QuestFrameAcceptButton:HookScript("OnClick", function()

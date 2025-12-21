@@ -65,4 +65,6 @@ Feedback welcome. Thank you for trying and happy typing.
 
 ## Known issues
 
-* Quests started by items are auto-accepted but not skipped by the addon.
+* Some quests started by items are auto-accepted but not skipped by the addon.
+
+* Normalizing text sometimes creates extra new lines in readable item texts.

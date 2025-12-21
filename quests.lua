@@ -96,7 +96,7 @@ end
 
 local function prepareTyping()
     hideObjectiveReward()
-    C_Timer.After(0, function() --maybe set this back to 0 -----this might prevent rewards being shown the first time the quest frame is opened after login
+    C_Timer.After(0, function() --this might prevent rewards being shown the first time the quest frame is opened after login
         hideObjectiveReward()
     end)    
 	editBox:Show()

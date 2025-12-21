@@ -1,4 +1,4 @@
-# TypeToMeClassic
+# TypeToMe
 A typing exercise addon. Type quest descriptions to accept and complete quests. Or sit in the library and write/copy books.
 
 ## How to use:
@@ -29,7 +29,7 @@ After installing the addon it should automatically run. If you encounter grey te
 * There is no accuracy test for readable items like books and letters. Those are basically free practice mode.
 
 `/typetome default`
-* Resets all the above to default settings.
+* Resets all settings.
 
 `/typetome`
 * View all slash commands and current settings.
@@ -48,8 +48,6 @@ In general all text which would be typed more than once was excluded because tha
 
 * All quests if you are in an instance - because everyone is an a hurry...
 
-* Quest info description text for auto-accept quests since it makes no sense to hide the accept button and because they appear unprompted.
-
 
 ## Additional Info
 
@@ -65,6 +63,6 @@ Feedback welcome. Thank you for trying and happy typing.
 
 ## Known issues
 
-* Some quests started by items are auto-accepted but not skipped by the addon.
-
 * Normalizing text sometimes creates extra new lines in readable item texts.
+
+* Auto accepted quests behave inconsistently

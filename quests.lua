@@ -96,8 +96,13 @@ end
 
 local function prepareTyping()
     hideObjectiveReward()
-    C_Timer.After(0, function() --this might prevent rewards being shown the first time the quest frame is opened after login
+    C_Timer.After(0.03, function() --this might prevent rewards being shown the first time the quest frame is opened after login
         hideObjectiveReward()
+        if textType == "qDescription" then
+            QuestFrameAcceptButton:Disable() --this inside delay for mop classic
+        elseif textType == "qComplete" then
+            QuestFrameCompleteQuestButton:Disable()
+        end
     end)    
 	editBox:Show()
     editBox:SetFocus()
@@ -129,18 +134,16 @@ frame:SetScript("OnEvent", function(self, event)
 
     if event == "QUEST_DETAIL" then
         textType = "qDescription"
-		if QuestGetAutoAccept() then
-            print("TypeToMe - Skipping quest: Auto-accept")
-			return
-		end  
+		-- if QuestGetAutoAccept() then -- mop classic works with this retail version of ttm except for questgetautoaccept...
+        --     print("TypeToMe - Skipping quest: Auto-accept")
+		-- 	return
+		-- end  
         SetActiveTextWidget(QuestInfoDescriptionText)
-        QuestFrameAcceptButton:Disable()
         questText = Helpers.normalizeText(GetQuestText())
         prepareTyping()
     elseif event == "QUEST_COMPLETE" then
         textType = "qComplete"
         SetActiveTextWidget(QuestInfoRewardText)
-        QuestFrameCompleteQuestButton:Disable()
         questText = Helpers.normalizeText(GetRewardText())
         prepareTyping()
     end

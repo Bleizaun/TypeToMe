@@ -13,7 +13,7 @@ function TypeToMe.Helpers.buildOutput(textChars, inputChars)
     local outputText = ""
     local correctCharacters = 0
     local incorrectCharacters = 0
-    for i = 1, math.max(#textChars, #inputChars) do
+    for i = 1, #textChars do -- for i = 1, math.max(#textChars, #inputChars) do
         local expected = textChars[i] or " "
         local typed = inputChars[i] or ""
         if typed == "" then
@@ -51,7 +51,7 @@ function TypeToMe.Helpers.normalizeText(text)
         -- :gsub("\n\n", "\n") -- this fixes extra new lines in items but breaks quests
         :gsub("\n\n+", "\n\n")
 		
-		--these following might not be the best idea
+		--these might not be the best idea
 		:gsub("  ", " ")
 		:gsub (" \n", "\n")
 		-- :gsub ("\194\160", "\n")

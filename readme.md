@@ -2,7 +2,6 @@
 A typing exercise addon. Type quest descriptions to accept and complete quests. Or sit in the library and write/copy books.
 
 ## How to use:
-Copy the unzipped TypeToMe folder into `*/_retail_/Interface/AddOns/`
 
 After installing the addon it should automatically run. If you encounter grey text that should be black just start typing.
 
@@ -10,7 +9,7 @@ After installing the addon it should automatically run. If you encounter grey te
 
 `/typetome quests`
 * Toggles quests typing on/off. Default: On.
-* Putting this twice in one macro lets you skip typing and accept/complete just the currently opened quest. Useful for when you are under time pressure - or just can't be bothered to type at the moment.
+* Putting this twice in one macro lets you skip typing and directly accept/complete the currently opened quest. Useful for when you are in a spawn location - or just can't be bothered to type that moment.
 
 `/typetome items`
 * Toggles item typing on/off. Default: On.

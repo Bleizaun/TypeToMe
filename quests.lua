@@ -74,7 +74,7 @@ local function textOutput()
         textWidget:SetText(outputText)
     end
 
-    if #inputChars >= #questChars and (correctCharacters / (correctCharacters + incorrectCharacters)) * 100 >= targetAccuracy then
+    if #inputChars == #questChars and (correctCharacters / (correctCharacters + incorrectCharacters)) * 100 >= targetAccuracy then
         if firstTry then
             typingEndTime = GetTime()
             totalTypingTime = typingEndTime - typingStartTime
@@ -96,10 +96,10 @@ end
 
 local function prepareTyping()
     hideObjectiveReward()
-    C_Timer.After(0.03, function() --this might prevent rewards being shown the first time the quest frame is opened after login
+    C_Timer.After(0.03, function() --this might prevent rewards being shown the first time a quest is opened after login
         hideObjectiveReward()
         if textType == "qDescription" then
-            QuestFrameAcceptButton:Disable() --this inside delay for mop classic
+            QuestFrameAcceptButton:Disable() -- this inside delay for mop classic
         elseif textType == "qComplete" then
             QuestFrameCompleteQuestButton:Disable()
         end
@@ -134,7 +134,7 @@ frame:SetScript("OnEvent", function(self, event)
 
     if event == "QUEST_DETAIL" then
         textType = "qDescription"
-		-- if QuestGetAutoAccept() then -- mop classic works with this retail version of ttm except for questgetautoaccept...
+		-- if QuestGetAutoAccept() then -- mop classic works with this retail version of ttm except for questgetautoaccept()...
         --     print("TypeToMe - Skipping quest: Auto-accept")
 		-- 	return
 		-- end  
@@ -170,7 +170,7 @@ end)
 
 QuestFrame:HookScript("OnHide", function()
 	resetEditBox()
-    -- this ensures objectives are not hidden in the quest log after closing an incomplete quest frame
+    -- this ensures objectives are not hidden in the quest log after closing an uncompleted quest frame
     QuestInfoObjectivesHeader:Show()
     QuestInfoObjectivesText:Show()
     -- QuestInfoRewardsFrame:Show()

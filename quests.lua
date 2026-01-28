@@ -134,10 +134,10 @@ frame:SetScript("OnEvent", function(self, event)
 
     if event == "QUEST_DETAIL" then
         textType = "qDescription"
-		-- if QuestGetAutoAccept() then -- mop classic works with this retail version of ttm except for questgetautoaccept()...
-        --     print("TypeToMe - Skipping quest: Auto-accept")
-		-- 	return
-		-- end  
+		if QuestGetAutoAccept() then -- mop classic works with this retail version of ttm except for questgetautoaccept()...
+            print("TypeToMe - Skipping quest: Auto-accept")
+			return
+		end  
         SetActiveTextWidget(QuestInfoDescriptionText)
         questText = Helpers.normalizeText(GetQuestText())
         prepareTyping()

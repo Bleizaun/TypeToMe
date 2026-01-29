@@ -47,6 +47,8 @@ In general all text which would be typed more than once was excluded because tha
 
 * All quests if you are in an instance - because everyone is an a hurry...
 
+* Automatically accepted quests.
+
 
 ## Additional Info
 

@@ -128,6 +128,7 @@ frame:SetScript("OnEvent", function(self, event)
     
     if lastQuestID ~= questID then
         userInput = ""
+		typingStartTime = nil
         lastQuestID = questID
         firstTry = true
     end

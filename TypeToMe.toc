@@ -1,4 +1,4 @@
-## Interface: 120001, 120000, 110207
+## Interface: 120005, 120001, 120000, 110207
 ## Title: TypeToMe
 ## Notes: Type quest descriptions to accept and complete quests. Or sit in the library and write/copy books.
 ## Author: Bleizaun
